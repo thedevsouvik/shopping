@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
+import HomePage from "./pages/HomePage";
+import ProductCategoryPage from "./pages/ProductsPage";
 import "./tailwind.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -15,18 +17,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppLayout />}>
-          <Route
-            index
-            element={
-              <h1 className="flex h-screen w-full items-center justify-center text-center text-5xl md:text-7xl">
-                React
-                <br />
-                Shopping
-                <br />
-                Application
-              </h1>
-            }
-          />
+          <Route index element={<HomePage />} />
+          <Route path=":category" element={<ProductCategoryPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
