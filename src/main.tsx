@@ -5,6 +5,7 @@ import AppLayout from "./components/AppLayout";
 import CartPage from "./pages/CartPage";
 import HomePage from "./pages/HomePage";
 import OrdersListPage from "./pages/OrdersListPage";
+import OrderViewPage from "./pages/OrderViewPage";
 import ProductPage from "./pages/ProductPage";
 import ProductCategoryPage from "./pages/ProductsPage";
 import SimilarProductPage from "./pages/SimilarProductPage";
@@ -23,15 +24,22 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<HomePage />} />
-          <Route path=":category" element={<ProductCategoryPage />} />
-          <Route path=":category/:product_id" element={<ProductPage />} />
-          <Route
-            path=":category/:product_id/similar"
-            element={<SimilarProductPage />}
-          />
-          <Route path="/wishlist" element={<WishlistPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/orders" element={<OrdersListPage />} />
+
+          <Route path=":category">
+            <Route index element={<ProductCategoryPage />} />
+            <Route path=":product_id">
+              <Route index element={<ProductPage />} />
+              <Route path="similar" element={<SimilarProductPage />} />
+            </Route>
+          </Route>
+
+          <Route path="wishlist" element={<WishlistPage />} />
+          <Route path="cart" element={<CartPage />} />
+
+          <Route path="orders">
+            <Route index element={<OrdersListPage />} />
+            <Route path=":order_id" element={<OrderViewPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
