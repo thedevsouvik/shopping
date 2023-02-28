@@ -5,6 +5,7 @@ import AppLayout from "./components/AppLayout";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import ProductCategoryPage from "./pages/ProductsPage";
+import SimilarProductPage from "./pages/SimilarProductPage";
 import "./tailwind.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -21,6 +22,10 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path=":category" element={<ProductCategoryPage />} />
           <Route path=":category/:product_id" element={<ProductPage />} />
+          <Route
+            path=":category/:product_id/similar"
+            element={<SimilarProductPage />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
