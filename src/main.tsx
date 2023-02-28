@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import ProductCategoryPage from "./pages/ProductsPage";
 import SimilarProductPage from "./pages/SimilarProductPage";
+import WishlistPage from "./pages/WishlistPage";
 import "./tailwind.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -26,6 +27,7 @@ function App() {
             path=":category/:product_id/similar"
             element={<SimilarProductPage />}
           />
+          <Route path="/wishlist" element={<WishlistPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
