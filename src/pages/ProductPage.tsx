@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 
-export default function ProductCategoryPage() {
-  const { category } = useParams();
+export default function ProductPage() {
+  const { product_id } = useParams();
   return (
     <main className="page">
       <h1 className="mb-0.5 bg-white p-1">
-        {category} products page main component
+        <span className="capitalize">{product_id}</span> product main component
       </h1>
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
         <p key={i} className="my-0.5 bg-white p-1">

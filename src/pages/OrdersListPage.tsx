@@ -1,12 +1,7 @@
-import { useParams } from "react-router-dom";
-
-export default function ProductCategoryPage() {
-  const { category } = useParams();
+export default function OrdersListPage() {
   return (
     <main className="page">
-      <h1 className="mb-0.5 bg-white p-1">
-        {category} products page main component
-      </h1>
+      <h1 className="mb-0.5 bg-white p-1">Orders list page main component</h1>
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
         <p key={i} className="my-0.5 bg-white p-1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque maiores
