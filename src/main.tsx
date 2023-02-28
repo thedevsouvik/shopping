@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import CartPage from "./pages/CartPage";
 import HomePage from "./pages/HomePage";
+import OrdersListPage from "./pages/OrdersListPage";
 import ProductPage from "./pages/ProductPage";
 import ProductCategoryPage from "./pages/ProductsPage";
 import SimilarProductPage from "./pages/SimilarProductPage";
@@ -30,6 +31,7 @@ function App() {
           />
           <Route path="/wishlist" element={<WishlistPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/orders" element={<OrdersListPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

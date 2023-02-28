@@ -1,6 +1,6 @@
 {
   "name": "shopping",
-  "version": "0.10.1",
+  "version": "0.11.1",
   "type": "module",
   "description": "A shopping web app with react, typescript, tailwind and vite",
   "author": {
