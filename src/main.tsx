@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 import HomePage from "./pages/HomePage";
 import OrdersListPage from "./pages/OrdersListPage";
 import OrderViewPage from "./pages/OrderViewPage";
@@ -40,6 +41,8 @@ function App() {
             <Route index element={<OrdersListPage />} />
             <Route path=":order_id" element={<OrderViewPage />} />
           </Route>
+
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
