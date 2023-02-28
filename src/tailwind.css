@@ -7,3 +7,9 @@
     @apply relative box-border overscroll-none bg-inherit;
   }
 }
+
+@layer components {
+  .page {
+    @apply relative;
+  }
+}
