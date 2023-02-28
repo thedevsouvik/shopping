@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
 import ProductCategoryPage from "./pages/ProductsPage";
 import "./tailwind.css";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<HomePage />} />
           <Route path=":category" element={<ProductCategoryPage />} />
+          <Route path=":category/:product_id" element={<ProductPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
