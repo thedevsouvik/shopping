@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  "@heroicons/react": 2.0.16
   "@types/node": 18.14.2
   "@types/react": 18.0.28
   "@types/react-dom": 18.0.11
@@ -23,6 +24,7 @@ dependencies:
   react-router-dom: 6.8.2_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  "@heroicons/react": 2.0.16_react@18.2.0
   "@types/node": 18.14.2
   "@types/react": 18.0.28
   "@types/react-dom": 18.0.11
@@ -300,6 +302,17 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@heroicons/react/2.0.16_react@18.2.0:
+    resolution:
+      {
+        integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==,
+      }
+    peerDependencies:
+      react: ">= 16"
+    dependencies:
+      react: 18.2.0
+    dev: true
 
   /@nodelib/fs.scandir/2.1.5:
     resolution:
@@ -933,7 +946,6 @@ packages:
       {
         integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==,
       }
-    dev: false
 
   /lilconfig/2.0.6:
     resolution:
@@ -951,7 +963,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /merge2/1.4.1:
     resolution:
@@ -1272,7 +1283,6 @@ packages:
     engines: { node: ">=0.10.0" }
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache/1.0.0:
     resolution:
