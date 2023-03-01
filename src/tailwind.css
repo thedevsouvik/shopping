@@ -12,4 +12,10 @@
   .page {
     @apply relative;
   }
+  .icon {
+    @apply mx-0.5 h-10 w-10 min-w-[40px] bg-inherit p-2 md:mx-1;
+  }
+  .icon[data-badge]::before {
+    @apply absolute top-0.5 right-0.5 z-10 rounded-full bg-red-500 p-1 font-semibold leading-[0.7] text-white content-[attr(data-badge)];
+  }
 }
